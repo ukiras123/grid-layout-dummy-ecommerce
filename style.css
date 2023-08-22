@@ -91,3 +91,46 @@ header {
   color: white;
   background-color: rgb(60, 159, 184);
 }
+
+/* For Ipad */
+@media (768px <= width <= 1024px) {
+  .wrapper {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-areas:
+      "h1 h1"
+      "header header"
+      "banner banner"
+      "banner banner"
+      "sidebox1 main "
+      "sb2 main "
+      "sm main "
+      "tags main "
+      "recent main "
+      "footer footer ";
+  }
+}
+
+/* For Mobile */
+@media (0 <= width < 768px) {
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .wrapper {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-areas:
+      "h1"
+      "header "
+      "banner "
+      "banner "
+      "sidebox1 "
+      "sb2 "
+      "sm "
+      "main"
+      "tags  "
+      "recent  "
+      "footer  ";
+  }
+}
