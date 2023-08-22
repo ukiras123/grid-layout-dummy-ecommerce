@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-areas:
+    "h1 h1 h1"
+    "header header header"
+    "banner banner sidebox1"
+    "banner banner sb2"
+    "sm main main"
+    "tags main main"
+    "recent main main"
+    "footer footer footer";
+}
+
+h1 {
+  padding: 1rem;
+  grid-area: h1;
+  background-color: brown;
+}
+
+header {
+  padding: 0.8rem;
+  grid-area: header;
+  background-color: orange;
+}
+
+.banner {
+  height: 20vh;
+  grid-area: banner;
+  background-color: pink;
+}
+.side-box1 {
+  grid-area: sidebox1;
+  background-color: green;
+}
+.side-box2 {
+  grid-area: sb2;
+  background-color: chartreuse;
+}
+.side-menu {
+  grid-area: sm;
+  background-color: violet;
+}
+.tags {
+  grid-area: tags;
+  background-color: aqua;
+}
+.recent {
+  grid-area: recent;
+  background-color: crimson;
+}
+.main {
+  min-height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: main;
+  gap: 5px;
+  justify-content: space-between;
+  background-color: gold;
+}
+.footer {
+  display: flex;
+  padding: 2rem;
+  grid-area: footer;
+  background-color: lightslategrey;
+}
+.left,
+.right,
+.center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center {
+  flex: 2;
+}
+.item {
+  flex-grow: 1;
+  padding: 2rem;
+  border: 2px solid red;
+}
+
+.main > .item:nth-child(odd) {
+  color: white;
+  background-color: rgb(60, 159, 184);
+}
